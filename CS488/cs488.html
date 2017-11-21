@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Kyle Fung CS488 Project</title>
+  </head>
+  <body>
+  <h><b> Extended Ray Tracer </b></h><br>
+
+  <h>Cylinder and rounded box primitives</h><br>
+  <img src="cylinder.png"> <img src="roundedBox.png"><br>
+  <p> These primitives were implemented using ray marching and signed distance fields. Rounded boxes are like normal boxes except their edges and corners are defined using quarters of circle arcs.</p><br>
+
+  <h>Texture mapping with UV maps</h><br>
+  <img src="diffuseQuad.png"> <img src="diffuseSphere.png">
+  <p> Triangle meshes and spheres can have their diffuse colors sampled from a texture map. </p> <br>
+
+  <h>Bump mapping</h><br>
+  <img src="bumpSphere.png"><br>
+  <p> Spheres are bump mapped with textures using Blinn's method. Due to time constraints this was not done for triangle meshes. </p><br>
+
+  <h>Depth of field</h><br>
+  <img src="DOF.png"><br>
+  <p> Far away pixels are blurred with a box blur depending on how far away from the camera they are. We use a depth buffer to track these values</p>
+
+  <h>Reflections</h><br>
+  <img src="reflection.png"><br>
+  <p> Images from the environment and neighbouring objects show up on surfaces through simulating reflections of light. </p>
+
+  <h>Hierarchical bounding volumes</h><br>
+  <img src="cow0.png"> <img src="cow1.png"> <img src="cowleaves.png"><br>
+  <p>Triangle meshes are partitioned using a kd-tree into a hierarchy of bounding volumes. This structure helps reduce redundant intersection checks. </p>
+
+  <h>Anti-aliasing with jittering</h><br>
+  <img src="diffuseQuad.png"><br>
+  <p>By jittering the pixels that we cast through and taking several samples, we are able to remove unwanted artifacts such as jaggies.</p>
+
+  <h>Soft shadows</h><br>
+  <img src="cylinder.png"><br>
+  <p>Soft shadows are created by approximating point lights as area lights and randomly sampling the lights when shooting shadow rays. </p>
+
+  <h>Motion blur</h><br>
+  <img src="MotionBlur.png"><br>
+  <p> Motion blur simulated by randomly sampling times in an interval and capturing an image of the scene at that time. Several samples are taken and averaged into the final image </p>
+
+  <h>Final scene</h><br>
+  <img src="finalscene.png"><br>
+  <p>Final scene is of a snooker table with a moving cue and cue ball (with motion blur). Additionally there are extra balls in the foreground that reflect off of each other. Lastly, there is a chair in the background (composed of the rounded box primitives mentioned earlier) that is blurred out due to depth of field. The table was parsed from an obj file.</p>
+
+  <h>Extra: Sierpinski Gasket </h><br>
+  <img src="gasket.png"><br>
+  <p> This new primitive is the 3D analog to the sierpinski triangle. This was rendered by ray marching with a distance field using an iterative scheme. </p>
+
+
+  </body>
+</html>
