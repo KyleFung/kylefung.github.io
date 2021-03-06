@@ -29,16 +29,16 @@
     <hr>
 
     <div class="row">
-        <h1>Shallow Water</h1>
-        <img class="float-left" src="shallow.png" style="width:450px;height:340px;">
+        <h1>WasteTracer</h1>
+        <img class="float-left" src="lion256.png" style="width:450px;height:340px;">
         <p>
-        This is an interative 3D water demo made in JavaScript and WebGL. This was originally supposed to be a solution to the <a href="https://en.wikipedia.org/wiki/Shallow_water_equations">Shallow Water Equations</a>, but we had trouble with instability. Instead we simulated the dynamics somewhat similarly to the Shallow Water Equations, but not quite.
+        This is a GPU accelerated path tracer using Metal compute shaders. You can load OBJ meshes into it and it will generate a path traced image. It supports Blinn-Phong materials (as they seem to be the only material supported by OBJ files) and is accelerated using SAH KD-trees.
         </p>
         <p>
-        This was a project I made with my friend <a href="https://github.com/wayne-wu">Wayne</a>. Click around <a href="https://wayne-wu.github.io/shallow-water/">here</a> to play with it.
+        This image is of a lion model, which has 300k faces and took 1430s to render at 256spp at 800x600.
         </p>
         <p>
-        <a href="https://github.com/wayne-wu/shallow-water">Code found here</a>
+        <a href="https://github.com/kylefung/wasteTracer">Code found here</a>
         </p>
     </div>
 
